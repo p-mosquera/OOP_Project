@@ -9,7 +9,7 @@ class Subject{
     private:
         string name;
         int ects, semester;
-        //Teacher* teacher;
+        Teacher* teacher;
     
 
     public:
