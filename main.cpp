@@ -27,8 +27,9 @@ int main() {
         cout << "1. Add professor" << endl;
         cout << "2. Add student" << endl;
         cout << "3. Add staff" << endl;
-        cout << "4. Show university members" << endl;
-        cout << "5. Add subject" << endl;
+        cout << "4. Add subject" << endl;
+        cout << "5. Show university members" << endl;
+
         cout << "0. Exit" << endl;
         cout << "Select an option: ";
         cin >> option;
@@ -42,8 +43,7 @@ int main() {
                 cout << "Employee ID: "; cin >> empId;
                 cout << "Department: "; cin >> dept;
                 
-                Subject* subject = new Subject(dept, 6);
-                Professor* prof = new Professor(name, lastname, dni, empId, dept, subject);
+                Professor* prof = new Professor(name, lastname, dni, empId, dept, nullptr);
                 myUniversity.addMember(prof);
                 break;
             }
@@ -71,19 +71,23 @@ int main() {
                 myUniversity.addMember(staff);
                 break;
             }
-            case 4:
-                myUniversity.describeMembers();
-                break;
-            case 5: {
+           
+            case 4: {
                 string name;
                 int credits;
                 cout << "Subject name: "; cin >> name;
                 cout << "Credits: "; cin >> credits;
                 
                 Subject* subject = new Subject(name, credits);
+                myUniversity.addSubject(subject);
                 cout << "Subject added successfully!" << endl;
                 break;
             }
+            
+            case 5:
+                myUniversity.describeMembers();
+                break;
+
             case 0:
                 cout << "Exiting program..." << endl;
                 break;
