@@ -23,7 +23,7 @@ public:
     void describePerson() override {
         cout << "Nombre: " << getName() << ", Apellido: " << getSurname() 
              << ", ID: " << getID() << ", Staff ID: " << staffID 
-             << ", Occupation: " << position << endl;
+             << ", Role: " << position << endl;
     }
 
     // Getters y setters
