@@ -1,9 +1,12 @@
 #include "subject.hpp"
 
 // Implementación del constructor
-Subject::Subject(const string& n, const int e) : name(n), ects(e), semester(0) {}
+Subject::Subject(const string& n, const int e) : name(n), ects(e), semester(0), teacher(nullptr) {}
 
-// Destructor virtual
+// Implementación del constructor que permite asignar un profesor
+Subject::Subject(const string& n, const int e, Professor* prof) : name(n), ects(e), semester(0), teacher(prof) {}
+
+// Destructor virtual puro
 Subject::~Subject() {}
 
 // Getters
