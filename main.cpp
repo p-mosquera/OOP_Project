@@ -10,7 +10,7 @@ using namespace std;
 int main() {
     // Create class instances
     Subject math("Mathematics", 6);
-    Professor prof("John", "Smith", "123456", "EMP001", "Mathematics", &math);
+    Professor prof("John", "Smith", "123456", "EMP001", "Mathematics");
     Student stud("Anna", "Jones", "789012", "STD001", "Engineering");
     Staff staff("Louis", "Martin", "345678", "STF001", "Administrative");
 
@@ -43,7 +43,7 @@ int main() {
                 cout << "Employee ID: "; cin >> empId;
                 cout << "Department: "; cin >> dept;
                 
-                Professor* prof = new Professor(name, lastname, dni, empId, dept, nullptr);
+                Professor* prof = new Professor(name, lastname, dni, empId, dept);
                 myUniversity.addMember(prof);
                 break;
             }
@@ -98,3 +98,5 @@ int main() {
 
     return 0;
 }
+
+
