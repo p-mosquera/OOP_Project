@@ -23,6 +23,7 @@ public:
     ~University();
 
     // Declaraciones de métodos
+    bool personExists(const string& dni);
     void addMember(Person* member);
     void addSubject(Subject* subject);
     void describeMembers() const;
