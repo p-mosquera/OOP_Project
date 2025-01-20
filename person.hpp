@@ -2,6 +2,7 @@
 #define PERSON_HPP
 
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -14,7 +15,7 @@ public:
     Person(const string& n, const string& s, const string& i);
     
     // Destructor virtual puro
-    virtual ~Person() = 0;
+    virtual ~Person();
     
     // Getters y setters
     string getName() const;
