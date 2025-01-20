@@ -2,6 +2,7 @@
 #define STAFF_HPP
 
 #include <string>
+#include <iostream>
 #include "person.hpp"
 
 using namespace std;
@@ -20,11 +21,7 @@ public:
     virtual ~Staff() {}
 
     // Implementación del método virtual puro
-    void describePerson() override {
-        cout << "Nombre: " << getName() << ", Apellido: " << getSurname() 
-             << ", ID: " << getID() << ", Staff ID: " << staffID 
-             << ", Role: " << position << endl;
-    }
+    void describePerson() override;
 
     // Getters y setters
     string getStaffID() const {
