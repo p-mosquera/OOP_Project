@@ -2,8 +2,8 @@
 #define PROFESSOR_HPP
 
 #include <string>
+#include <iostream>
 #include "person.hpp"
-#include "subject.hpp"
 
 using namespace std;
 
@@ -11,23 +11,18 @@ class Professor : public Person {
 private:
     string employeeID;
     string department;
-    Subject* subject; // Asignatura que el profesor es responsable
+
 
 public:
     // Constructor
-    Professor(const string& n, const string& s, const string& i, const string& empID, const string& dept, Subject* subj)
-        : Person(n, s, i), employeeID(empID), department(dept), subject(subj) {}
+        Professor(const string& n, const string& s, const string& i, const string& empID, const string& dept)
+        : Person(n, s, i), employeeID(empID), department(dept) {}
 
     // Destructor
     virtual ~Professor() {}
 
     // Implementación del método virtual puro
-    void describePerson() override {
-        cout << "Nombre: " << getName() << ", Apellido: " << getSurname() 
-             << ", ID: " << getID() << ", Employee ID: " << employeeID 
-             << ", Departamento: " << department 
-             << ", Asignatura: " << (subject ? subject->getSubject() : "N/A") << endl;
-    }
+    void describePerson() override;
 
     // Getters y setters
     string getEmployeeID() const {
@@ -46,13 +41,6 @@ public:
         department = dept;
     }
 
-    Subject* getSubject() const {
-        return subject;
-    }
-
-    void setSubject(Subject* subj) {
-        subject = subj;
-    }
 };
 
 #endif // PROFESSOR_HPP
