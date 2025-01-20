@@ -2,6 +2,7 @@
 #define STUDENT_HPP
 
 #include <string>
+#include <iostream>
 #include "person.hpp"
 
 using namespace std;
@@ -20,11 +21,7 @@ public:
     virtual ~Student() {} 
 
     // Implementación del método virtual puro
-    void describePerson() override {
-        cout << "Nombre: " << getName() << ", Apellido: " << getSurname() 
-             << ", ID: " << getID() << ", Student ID: " << studentID 
-             << ", Major: " << major << endl;
-    }
+    void describePerson() override;
 
     // Getters y setters
     string getStudentID() const {
