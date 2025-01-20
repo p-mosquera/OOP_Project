@@ -3,7 +3,7 @@
 
 // Método para describir al personal
 void Staff::describePerson() {
-    cout << "Nombre: " << getName() << ", Apellido: " << getSurname()
+    cout << "Name: " << getName() << ", Surname: " << getSurname()
          << ", ID: " << getID() << ", Employee ID: " << staffID
          << ", Position: " << position << endl;
 }
