@@ -3,7 +3,9 @@
 
 // Implementación del constructor de la clase Person
 Person::Person(const string& n, const string& s, const string& i) 
-    : name(n), surname(s), id(i), birthday(d) {}
+    : name(n), surname(s), id(i){}
+
+Person::~Person(){}
 
 // Implementación de los getters
 string Person::getName() const {
@@ -30,10 +32,4 @@ void Person::setID(const string& i) {
     id = i;
 }
 
-string Person::getBirthday() const {
-    return birthday;
-}
 
-void Person::setBirthday(const date& d) {
-    birthday = d;
-}
